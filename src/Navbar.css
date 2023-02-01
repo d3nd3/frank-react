@@ -1,3 +1,21 @@
 .navbar {
 /*	min-height: 75px*/
+display: flex;
+justify-content: flex-end;
+
+/*min-height: 1.4rem;*/
+}
+
+.navbar ul  {
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 5px;
+	width: 30%;
+	font-size: 1.4rem;
+}
+.navbar li {
+	flex-grow: 0;
+}
+.navbar a {
+	color: #213547;
 }

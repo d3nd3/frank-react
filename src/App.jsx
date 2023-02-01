@@ -10,10 +10,9 @@ function App() {
 
   return (
     <div className="app">
-      <Navbar className="navbar"></Navbar>
-      <MainContent className="mainContent"></MainContent>
-      <Footer className="footer"></Footer>
-
+      <Navbar className="navbar"/>
+      <MainContent className="mainContent"/>
+      <Footer className="footer"/>
     </div>
   )
 }
