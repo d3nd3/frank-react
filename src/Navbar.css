@@ -4,17 +4,28 @@ display: flex;
 justify-content: flex-end;
 
 /*min-height: 1.4rem;*/
+position: sticky;
+top: 0;
+
+border-bottom-color: rgb(235,219,1);
+border-bottom-width: 0.2rem;
+border-bottom-style: solid;
+
+background-color: white;
+
 }
 
 .navbar ul  {
 	justify-content: space-evenly;
 	align-items: center;
 	gap: 5px;
-	width: 30%;
+
+	flex-basis: 40%;
+
 	font-size: 1.4rem;
 }
 .navbar li {
-	flex-grow: 0;
+	
 }
 .navbar a {
 	color: #213547;

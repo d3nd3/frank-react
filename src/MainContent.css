@@ -3,10 +3,6 @@
 
 /*	min-height: 0;*/
 
-	border-top-color: rgb(235,219,1);
-	border-top-width: 0.2rem;
-	border-top-style: solid;
-
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -15,20 +11,47 @@
 	flex-wrap: wrap;
 	text-align: left;
 
+	
 }
 
+
 .mainContent h1 {
-	padding-left: 1.5rem;
+	margin-left: 2rem;
 	flex-basis: 100%;
 	font-size : 2rem;
 }
 
 .mainContent h2 {
-	padding-left: 2rem;
+	flex-basis: 100%;
+	
+/*cannot rely on inheritance here useragent stylesheet sets font-size*/
 	font-size: 1.5rem;
 }
 
 .mainContent p {
-	padding-left: 2.5rem;
-	font-size: 1rem;
+	line-height: 1.7rem;
+	padding: 0.3rem 0;
+	font-size: 1.2rem;
+	text-indent: 0.6rem;
+
+}
+
+.intro p {
+	margin-left: 2rem;
+}
+.mainContent ul p {
+	text-indent: 0;
+}
+.mainContent ul {
+	margin-left: 0;
+	display: block;
+	list-style-type: "-  ";
+}
+.mainContent li {
+	/* ul requires margin for bulletpoint visible	*/
+	margin-left: 3.5rem;
+}
+.mainContent li::marker {
+	font-size: 1.5rem;
+	color: rgb(235,219,1);
 }
