@@ -13,8 +13,6 @@
 
 	
 }
-
-
 .mainContent h1 {
 	margin-left: 2rem;
 	flex-basis: 100%;
@@ -36,22 +34,22 @@
 
 }
 
-.intro p {
+.mainContent>.intro>p {
 	margin-left: 2rem;
 }
-.mainContent ul p {
+.mainContent>.offer p {
 	text-indent: 0;
 }
-.mainContent ul {
+.mainContent>.offer>ul {
 	margin-left: 0;
 	display: block;
 	list-style-type: "-  ";
 }
-.mainContent li {
+.mainContent>.offer>ul>li {
 	/* ul requires margin for bulletpoint visible	*/
 	margin-left: 3.5rem;
 }
-.mainContent li::marker {
+.mainContent>.offer li::marker {
 	font-size: 1.5rem;
 	color: rgb(235,219,1);
 }

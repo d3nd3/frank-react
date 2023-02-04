@@ -3,7 +3,7 @@ import './Footer.css'
 function Footer() {
 	return (
 		<div className="footer">
-			I am a footer.
+			<span>&copy; Frank Interior Design 2023</span>
 		</div>
 	)
 }
