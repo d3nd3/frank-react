@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "bash deploy.sh",
+    "deploy": "touch dist/.nojekyll && gh-pages -t -d dist",
     "preview": "vite preview"
   },
   "dependencies": {
