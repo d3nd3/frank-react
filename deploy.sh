@@ -1,3 +1,4 @@
 #!/bin/bash
-touch dist/.nojekyll
+git checkout gh-pages
+touch .nojekyll
 gh-pages -d dist
