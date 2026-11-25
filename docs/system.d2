@@ -1,0 +1,51 @@
+# frank-react — the Frank Interior Design page rebuilt as a Vite + React tree
+# Strokes only (no fills) so the light and dark diagram themes both stay readable.
+direction: right
+grid-columns: 2
+grid-rows: 2
+
+classes: {
+  entry: {style: {stroke: "#4f9cf9"; stroke-width: 2}}
+  core: {style: {stroke: "#9a7cf9"}}
+  state: {style: {stroke: "#e0a44a"}}
+  ext: {style: {stroke: "#6ac48a"; stroke-dash: 4}}
+  store: {style: {stroke: "#e0a44a"; stroke-width: 2}}
+}
+
+entry: Entry points {
+  direction: down
+  html: "index.html · one div#root and one module script, nothing else" {class: entry}
+  main: "src/main.jsx · createRoot plus StrictMode, drops App into #root" {class: entry}
+  scripts: "package.json · dev, build, preview, and a deploy script" {class: entry}
+}
+
+state: Styles and assets {
+  direction: down
+  grid-columns: 2
+  shell: "App.css · #root capped at 1280 px, .app is a three-row grid of 2.8rem, 1fr, 2.8rem" {class: store}
+  parts: "Navbar, MainContent and Footer css · one file per component" {class: store}
+  reset: "reset.css · box-sizing and margin 0, imported last so it lands after the other sheets" {class: store}
+  fonts: "App.css @font-face · Didact Gothic woff2 pulled from fonts.gstatic.com at runtime" {class: store}
+  images: "src/assets/s1.png, s2.png, s3.png · no component imports them, three dead mockup shots" {class: store; shape: cylinder}
+}
+
+core: Core {
+  direction: down
+  app: "App.jsx · grid shell: Navbar, MainContent, Footer in three rows" {class: core}
+  navbar: "Navbar.jsx · three links, all href ./ — home, work and contact are the same page" {class: core}
+  content: "MainContent.jsx · intro paragraphs plus a six-item What we do list, hardcoded copy" {class: core}
+  footer: "Footer.jsx · one copyright span, ellipsis when the window is narrow" {class: core}
+  props: "App passes className down · every child ignores props and hardcodes its class" {class: core}
+  deadstate: "App.jsx · useState count is declared and never read, a Vite scaffold leftover" {class: core}
+}
+
+external: External {
+  direction: down
+  pages: "GitHub Pages · d3nd3.github.io/frank-react, vite base is /frank-react/" {class: ext}
+  deploy: "npm run deploy · touch dist/.nojekyll, then gh-pages -t -d dist publishes the built tree" {class: ext}
+  gfonts: "fonts.gstatic.com · the only runtime request that is not our own origin" {class: ext}
+}
+
+entry -> core
+core -> state
+core -> external
